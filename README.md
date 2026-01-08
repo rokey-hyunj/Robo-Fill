@@ -6,7 +6,7 @@
 
 > Isaac Sim 환경에서 UR10 로봇팔을 활용하여 차량 주유구를 자동으로 인식하고 주유하는 무인 자동화 시스템 시뮬레이션
 
-![System Overview](docs/images/system_overview.png)
+![System Overview](docs/images/system_overview.svg)
 
 ## 📋 목차
 - [프로젝트 소개](#프로젝트-소개)
@@ -142,8 +142,8 @@ pip install numpy opencv-python opencv-contrib-python
 
 ### 저장소 클론
 ```bash
-git clone https://github.com/your-team/robotic-refueling-system.git
-cd robotic-refueling-system
+git clone https://github.com/rokey-hyunj/Robo-Fill.git
+cd Robo-Fill
 ```
 
 ### 에셋 준비
@@ -167,7 +167,7 @@ pip install -r requirements.txt
 ### 1. 시뮬레이션 실행
 ```bash
 # Isaac Sim 환경에서 실행
-cd /path/to/project
+cd /Robo-Fill
 python main.py
 ```
 
@@ -216,13 +216,12 @@ robotic-refueling-system/
 ├── robot_env.py               # 로봇 환경 설정 및 UR10 제어
 ├── car_env.py                 # 차량 환경 설정 및 이동 제어
 ├── markers.py                 # ArUco 마커 감지 및 고객 정보 파싱
-├── assets/                    # USD 모델 파일
-│   ├── default_world.usd
+├── assets/                    # USD/OBJ 모델 파일
+│   ├── benz.usd
 │   ├── car.usd
-│   ├── taxi.usd
-│   └── benz.usd
-├── docs/                      # 문서
-│   └── images/
+│   ├── default_world.usd
+│   ├── gas_station.obj
+│   └── taxi.usd
 ├── requirements.txt           # Python 의존성
 └── README.md
 ```
@@ -340,13 +339,13 @@ Task 7: 그리퍼 열기 (노즐 반납)
 ## 📞 문의
 
 프로젝트에 대한 문의사항이 있으시면 다음으로 연락주세요:
-- 이슈 트래커: [GitHub Issues](https://github.com/your-team/robotic-refueling-system/issues)
-- 이메일: team@example.com
+- 이슈 트래커: [GitHub Issues](https://github.com/rokey-hyunj/Robo-Fill/issues)
+- 이메일: hyunjongkim0524@gmail.com
 
 ## 📚 참고 자료
 
-- [NVIDIA Isaac Sim Documentation](https://docs.omniverse.nvidia.com/isaacsim/latest/index.html)
-- [Universal Robots UR10 Specifications](https://www.universal-robots.com/products/ur10-robot/)
+- [NVIDIA Isaac Sim Documentation](https://docs.isaacsim.omniverse.nvidia.com/5.0.0/index.html)
+- [Universal Robots UR10 Specifications](https://www.universal-robots.com/media/50895/ur10_en.pdf)
 - [ArUco Marker Detection](https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html)
 - [RMPflow Paper](https://arxiv.org/abs/1811.07049)
 
